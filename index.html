@@ -1,71 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>oscarinsh.uk</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <style>
-    * {
-      box-sizing: border-box;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oscar Insh's Homepage</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
+<style>
+* {
+box-sizing: border-box;
     }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      margin: 0;
-      background: #fafafa;
-      color: #1a1a1a;
-      text-align: center;
-      padding: 2rem;
+
+body {
+margin: 0;
+min-height: 100vh;
+font-family: 'Baloo 2', sans-serif;
+color: #e8eaf6;
+background: radial-gradient(circle at 20% 20%, #2a1a5e 0%, #14103a 45%, #0a0820 100%);
+background-attachment: fixed;
+position: relative;
+overflow-x: hidden;
     }
-    .container {
-      max-width: 480px;
+
+body::before {
+content: "";
+position: fixed;
+top: 0; left: 0; right: 0; bottom: 0;
+background-image:
+radial-gradient(2px 2px at 20px 30px, white, transparent),
+radial-gradient(2px 2px at 140px 80px, white, transparent),
+radial-gradient(1px 1px at 90px 40px, white, transparent),
+radial-gradient(1px 1px at 200px 150px, white, transparent),
+radial-gradient(2px 2px at 260px 60px, white, transparent),
+radial-gradient(1px 1px at 320px 120px, white, transparent),
+radial-gradient(2px 2px at 380px 20px, white, transparent),
+radial-gradient(1px 1px at 40px 180px, white, transparent);
+background-repeat: repeat;
+background-size: 420px 220px;
+opacity: 0.5;
+pointer-events: none;
+z-index: 0;
     }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin: 0 0 0.75rem;
+
+.container {
+position: relative;
+z-index: 1;
+max-width: 700px;
+margin: 0 auto;
+padding: 3rem 1.5rem 4rem;
     }
-    p {
-      color: #666;
-      font-size: 1.05rem;
-      line-height: 1.5;
-      margin: 0 0 2rem;
+
+header {
+text-align: center;
+margin-bottom: 2.5rem;
     }
-    .dot {
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #2ea44f;
-      margin-right: 8px;
-      vertical-align: middle;
+
+header .emoji {
+font-size: 3rem;
+display: block;
+margin-bottom: 0.5rem;
     }
-    .status {
-      font-size: 0.85rem;
-      color: #999;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+
+h1 {
+font-family: 'Space Grotesk', sans-serif;
+font-size: 2.2rem;
+font-weight: 700;
+margin: 0 0 0.4rem;
+background: linear-gradient(90deg, #a78bfa, #f472b6, #60a5fa);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
     }
-    footer {
-      position: absolute;
-      bottom: 1.5rem;
-      font-size: 0.8rem;
-      color: #bbb;
+
+header p {
+color: #b8bce0;
+font-size: 1.05rem;
+margin: 0;
     }
-  </style>
+
+.card {
+background: rgba(255, 255, 255, 0.06);
+border: 1px solid rgba(255, 255, 255, 0.12);
+border-radius: 16px;
+padding: 1.6rem 1.8rem;
+margin-bottom: 1.5rem;
+backdrop-filter: blur(6px);
+    }
+
+.card h2 {
+font-family: 'Space Grotesk', sans-serif;
+font-size: 1.2rem;
+margin: 0 0 0.7rem;
+color: #f9a8d4;
+    }
+
+.card p {
+line-height: 1.65;
+margin: 0 0 0.7rem;
+color: #dcdcf5;
+    }
+
+.card p:last-child {
+margin-bottom: 0;
+    }
+
+.tags {
+display: flex;
+flex-wrap: wrap;
+gap: 0.5rem;
+margin-top: 0.8rem;
+    }
+
+.tag {
+background: rgba(167, 139, 250, 0.18);
+border: 1px solid rgba(167, 139, 250, 0.4);
+color: #c4b5fd;
+padding: 0.3rem 0.7rem;
+border-radius: 999px;
+font-size: 0.85rem;
+    }
+
+.callsign {
+font-family: 'Space Grotesk', sans-serif;
+font-weight: 700;
+color: #93c5fd;
+letter-spacing: 0.03em;
+    }
+
+footer {
+text-align: center;
+color: #7b7fa8;
+font-size: 0.85rem;
+margin-top: 2rem;
+    }
+
+footer span {
+display: block;
+margin-top: 0.3rem;
+    }
+
+footer a {
+color: #D97757;
+text-decoration: none;
+font-weight: 600;
+    }
+
+footer a:hover {
+text-decoration: underline;
+    }
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>oscarinsh.uk</h1>
-    <p>Something's being built here. Check back soon.</p>
-    <div class="status"><span class="dot"></span>Site under construction</div>
-  </div>
-  <footer>&copy; 2026 oscarinsh.uk</footer>
+<div class="container">
+<header>
+<span class="emoji">🚀</span>
+<h1>Welcome to Oscar's Homepage!</h1>
+</header>
+
+<div class="card">
+<h2>👋 About Me</h2>
+<p>Hi, I'm Oscar! I live on Earth.</p>
+<p>I've just gone into my last year of primary school, and will turn 11 at the end of this year.</p>
+</div>
+
+<div class="card">
+<h2>🛠️ What I Do</h2>
+<p>I'm an amateur Minecraft Forge modder and Python coder.</p>
+<p>I'm also a Foundation Level Amateur Radio License holder — my callsign is <span class="callsign">M7WFO</span>. You can reach me most days on <span class="callsign">GB3PI</span>, the Royston repeater!</p>
+</div>
+
+<footer>
+      Made by Oscar, with more than a little help from <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a>.
+<span>oscarinsh.uk</span>
+</footer>
+</div>
 </body>
 </html>

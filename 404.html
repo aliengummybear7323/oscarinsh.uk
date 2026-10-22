@@ -1,53 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verifying your connection...</title>
-    <!-- 1. Load the Cloudflare Turnstile Script -->
-    <script src="https://cloudflare.com" async defer></script>
-    
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f9f9f9;
-            margin: 0;
-        }
-        .container {
-            text-align: center;
-            padding: 30px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        h1 { font-size: 24px; color: #333; margin-bottom: 8px; }
-        p { color: #666; margin-bottom: 24px; }
-    </style>
+    <title>Redirecting...</title>
+    <script>
+        // Once the visitor clears the Cloudflare proxy check, send them home!
+        window.location.href = "https://oscarinsh.uk";
+    </script>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Verifying your connection</h1>
-        <p>Please complete the security check to continue to oscarinsh.uk.</p>
-        
-        <!-- 2. The Turnstile Box configured with your unique Site Key -->
-        <div class="cf-turnstile" 
-             data-sitekey="0x4AAAAAAAFgW1vf4m4r8S8UP" 
-             data-callback="onSuccess"></div>
-    </div>
-
-    <script>
-        // 3. This function automatically fires as soon as they pass the check
-        function onSuccess(token) {
-            // Instantly send them back to your homepage
-            window.location.href = "https://oscarinsh.uk";
-        }
-    </script>
-
+    <p>Redirecting you to the homepage...</p>
 </body>
 </html>
